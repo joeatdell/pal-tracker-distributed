@@ -6,7 +6,7 @@ applications:
   memory: 512Mb
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-333.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     JAVA_OPTS: '-Xss256k -Xmx192m -XX:MaxMetaspaceSize=100m'
   services:
