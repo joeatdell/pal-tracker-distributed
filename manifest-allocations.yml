@@ -3,10 +3,11 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
   - route: allocations-pal-111.cfapps.io
-  memory: 1G
+  memory: 512Mb
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    JAVA_OPTS: '-Xss256k -Xmx192m -XX:MaxMetaspaceSize=100m'
   services:
   - tracker-allocations-database

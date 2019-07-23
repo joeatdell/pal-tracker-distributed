@@ -3,10 +3,11 @@ applications:
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
   - route: backlog-pal-222.cfapps.io
-  memory: 1G
+  memory: 512Mb
   instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    JAVA_OPTS: '-Xss256k -Xmx192m -XX:MaxMetaspaceSize=100m'
   services:
   - tracker-backlog-database
